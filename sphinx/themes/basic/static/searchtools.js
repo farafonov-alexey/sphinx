@@ -55,7 +55,8 @@ const _removeChildren = (element) => {
  * See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping
  */
 const _escapeRegExp = (string) =>
-  string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+  // string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+  string
 
 const _displayItem = (item, searchTerms, highlightTerms) => {
   const docBuilder = DOCUMENTATION_OPTIONS.BUILDER;
@@ -261,8 +262,9 @@ const Search = {
       // maybe skip this "word"
       // stopwords array is from language_data.js
       if (
-        stopwords.indexOf(queryTermLower) !== -1 ||
-        queryTerm.match(/^\d+$/)
+        // stopwords.indexOf(queryTermLower) !== -1 ||
+        // queryTerm.match(/^\d+$/)
+        stopwords.indexOf(queryTermLower) !== -1
       )
         return;
 

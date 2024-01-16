@@ -16,7 +16,7 @@ if 'PYTHONWARNINGS' not in os.environ:
 warnings.filterwarnings('ignore', 'The frontend.Option class .*',
                         DeprecationWarning, module='docutils.frontend')
 
-__version__ = '7.3.0'
+__version__ = '7.3.0rc1'
 __display_version__ = __version__  # used for command line version
 
 #: Version info for better programmatic use.
@@ -27,7 +27,7 @@ __display_version__ = __version__  # used for command line version
 #:
 #: .. versionadded:: 1.2
 #:    Before version 1.2, check the string ``sphinx.__version__``.
-version_info = (7, 3, 0, 'beta', 0)
+version_info = (7, 3, 0, 'rc', 1)
 
 package_dir = path.abspath(path.dirname(__file__))
 
