@@ -69,3 +69,8 @@ ifndef target
 	$(info You need to provide a target variable, e.g. `make docs target=html`.)
 endif
 	$(MAKE) -C doc $(target)
+
+.PHONY: docker
+docker:
+	docker build -t farafonovalexey/sphinx:7.3.0rc1 .
+	docker push farafonovalexey/sphinx:7.3.0rc1
