@@ -72,5 +72,5 @@ endif
 
 .PHONY: docker
 docker:
-	docker build -t farafonovalexey/sphinx:7.3.0rc1 .
-	docker push farafonovalexey/sphinx:7.3.0rc1
+	docker build -t farafonovalexey/sphinx:7.3.0rc1_3.9.20 .
+	docker push farafonovalexey/sphinx:7.3.0rc1_3.9.20
